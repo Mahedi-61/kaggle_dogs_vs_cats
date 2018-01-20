@@ -1,7 +1,7 @@
 Kaggle: Dogs vs Cats Kernel Redux Edition
 ------------------------------------------------------------
 
-This repository consists my simple solution for the kaggle [Cats vs Dogs classification challenge][1] <br/>
+This repository consists my simple solution for the kaggle https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition challenge<br/>
 This solution scored a logloss of **0.06499** on the public leaderboard
 
 Steps for better accuracy
@@ -13,4 +13,3 @@ Steps for better accuracy
 -> diffenrent data augmentation like sheering, zooming,  horizontal-vertical shifts and flips are done. <br/>
 -> PReLU activation gives best result <br/>
 
-1. https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition
