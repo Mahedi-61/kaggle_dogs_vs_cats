@@ -1,0 +1,3 @@
+download data from https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data
+
+keep it here without any modication. 

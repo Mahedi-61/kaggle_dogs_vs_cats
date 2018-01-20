@@ -1,0 +1,27 @@
+#first login
+floyd login
+
+#create project in floydhub and the write
+floyd init <project_name>
+
+floyd run --gpu --env keras --data mahedi/datasets/dogs_vs_cats/2:input "python image_preprocessing.py"
+
+
+floyd run --env keras --data mahedi/projects/kaggle_dog_vs_cats/63/output:data --data mahedi/datasets/resnet101_weights_tf/1:weight --gpu  "python train.py"
+
+
+floyd run --env keras --data mahedi/datasets/dogs_vs_cats/2:input  --data mahedi/projects/kaggle_dog_vs_cats/69/output:model_1  --data mahedi/projects/kaggle_dog_vs_cats/73/output:model_2  --data mahedi/projects/kaggle_dog_vs_cats/71/output:model_3  --gpu "python test.py"
+
+
+
+
+
+
+#for uploading a dataset first Initialize it locally
+floyd data init keras_resnet50_without_top_weights
+floyd data upload
+
+
+resnet50  (0.06136) -->  mahedi/projects/kaggle_dog_vs_cats/69/output
+resnet101 (0.06828) -->  mahedi/projects/kaggle_dog_vs_cats/73/output
+resnet152 (0.06370) -->  mahedi/projects/kaggle_dog_vs_cats/71/output
